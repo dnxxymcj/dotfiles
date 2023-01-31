@@ -1,28 +1,59 @@
 [alias]
-    co = checkout
-    sw = switch
-    ci = commit
-    br = branch
-    st = status
-    cp = cherry-pick
-    lt = describe --tags --abbrev=0
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    ours = "!f() { git checkout --ours $@ && git add $@; }; f"
-    theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
-    la = "!git config -l | grep alias | cut -c 7-"
+  a = add 
+  aa = add --all
+  co = checkout
+  sw = switch
+  ci = commit -v
+  cm = commit -m
+  ca = commit --amend
+  m = merge
+  mf = merge --ff-only
+  rl = reflog
+  cp = cherry-pick
+  rb = rebase
+  ra = rebase --abort
+  rc = rebase --continue
+  ri = rebase --interactive
+  d = diff
+  ds = diff --staged
+  dw = diff --patience --word-diff
+  dom = diff origin/master 
+  b = branch 
+  ba = branch -a
+  br = branch -r
+  bv = branch -vv
+  s = status -sb
+  st = status
+  p = push
+  pl = pull
+  r = remote
+  f = fetch
+  cl = clone
+  ls = ls-files
+  cat = cat-file
+  last = log -1 HEAD --stat
+  unstage = restore --staged
+  grep = grep --line-number
+  al = "!git config -l | grep alias | cut -c 7-"
+  ours = "!f() { git checkout --ours $@ && git add $@; }; f"
+  theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+  l = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 [user]
-    name = CJ
-    email = dnxxymcj@gmail.com
+  name = CJ
+  email = dnxxymcj@gmail.com
 
 [core]
-    editor = lvim
+  editor = lvim
 
 [init]
-    defaultBranch = master
+  defaultBranch = master
 
 [filter "lfs"]
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
-    clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+
+[color]
+  ui = auto
