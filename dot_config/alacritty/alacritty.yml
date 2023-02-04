@@ -38,9 +38,9 @@ selection:
 cursor:
   style:
     shape: Beam
+    blinking: On
   vi_mode_style: 
     shape: Block
-  unfocused_hollow: true
 
 live_config_reload: true
 
