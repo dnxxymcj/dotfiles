@@ -4,9 +4,9 @@
   ap = add --patch
   co = checkout
   sw = switch
-  ci = commit -v
+  c = commit -v
   cm = commit -m
-  ca = commit --amend
+  amend = commit --amend
   m = merge
   mf = merge --ff-only
   rl = reflog
@@ -42,6 +42,7 @@
   ours = "!f() { git checkout --ours $@ && git add $@; }; f"
   theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
   l = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+   day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
 
 [user]
   name = CJ
