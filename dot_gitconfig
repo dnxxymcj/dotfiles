@@ -36,6 +36,7 @@
   ls = ls-files
   cat = cat-file
   ll = log -1 HEAD --stat
+  count = shortlog -sn
   unstage = restore --staged
   grep = grep --line-number
   al = "!git config -l | grep alias | cut -c 7-"
