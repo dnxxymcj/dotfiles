@@ -11,6 +11,7 @@
   w = worktree
   wa = worktree add
   wl = worktree list
+  wr = worktree remove
 
   co = checkout
   sw = switch
