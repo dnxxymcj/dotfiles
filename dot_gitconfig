@@ -56,7 +56,7 @@
   f = fetch
   cl = clone
 
-  ls = ls-files
+  ls = ls-files -s
   cat = cat-file
 
   al = "!git config -l | grep alias | cut -c 7-"
