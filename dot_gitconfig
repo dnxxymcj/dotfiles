@@ -2,48 +2,66 @@
   a = add 
   aa = add --all
   ap = add --patch
+
+  ss = stash
+  sl = stash list
+  sa = stash apply
+  sd = stash drop
+
   co = checkout
   sw = switch
+
   c = commit -v
   cm = commit -m
   amend = commit --amend
+
   m = merge
   mf = merge --ff-only
-  rl = reflog
-  cp = cherry-pick
+
+
   rb = rebase
   ra = rebase --abort
   rc = rebase --continue
   ri = rebase --interactive
+
   d = diff
   ds = diff --staged
   dl = diff HEAD^
   dw = diff --patience --word-diff
   dom = diff origin/master 
+
   b = branch 
   bm = branch --merged
   bn = branch --no-merged
   ba = branch -a
   br = branch -r
   bv = branch -vv
+
   s = status -sb
   st = status
+
+  unstage = restore --staged
+  grep = grep --line-number
+  rl = reflog
+  cp = cherry-pick
+
   ps = push
   pl = pull
   r = remote
   f = fetch
   cl = clone
+
   ls = ls-files
   cat = cat-file
-  ll = log -1 HEAD --stat
-  count = shortlog -sn
-  unstage = restore --staged
-  grep = grep --line-number
+
   al = "!git config -l | grep alias | cut -c 7-"
   ours = "!f() { git checkout --ours $@ && git add $@; }; f"
   theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
+
+  count = shortlog -sn
+  ll = log -1 HEAD --stat
   l = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-   day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
+  day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
 
 [user]
   name = CJ
