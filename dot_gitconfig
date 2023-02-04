@@ -3,10 +3,14 @@
   aa = add --all
   ap = add --patch
 
-  ss = stash
+  sp = stash push
   sl = stash list
   sa = stash apply
   sd = stash drop
+
+  w = worktree
+  wa = worktree add
+  wl = worktree list
 
   co = checkout
   sw = switch
