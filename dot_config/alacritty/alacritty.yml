@@ -26,7 +26,6 @@ font:
   bold_italic:
     family: FiraCode Nerd Font
     style: Light
-
   size: 16.0
 
 draw_bold_text_with_bright_colors: true
@@ -86,4 +85,4 @@ key_bindings:
   - { key: K,      mods: Shift,         mode: Vi|~Search, action: SearchPrevious          }
 
 import:
-  - ~/.config/alacritty/themes/themes/nord.yaml #highlight_damage: false
+  - ~/.config/alacritty/themes/nord.yaml 
