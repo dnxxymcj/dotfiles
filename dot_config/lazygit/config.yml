@@ -24,7 +24,7 @@ keybinding:
     tagCommit: "J"
 
 os:
-  editCommand: 'lvim' # as an example 
+  editCommand: 'nvim' # as an example 
   openCommand: 'code -rg {{filename}}'
 
 

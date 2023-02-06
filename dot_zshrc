@@ -111,11 +111,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ze="~/.cargo/bin/zellij"
-alias vi=lvim
-alias vim=lvim
+alias vi=nvim
+alias vim=nvim
 alias lg=lazygit
 alias cm=chezmoi
-export EDITOR=lvim
+export EDITOR=nvim
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

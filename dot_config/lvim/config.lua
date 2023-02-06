@@ -7,7 +7,7 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- General
 -- =========================================
-lvim.colorscheme = "nordfox"
+lvim.colorscheme = "Nordfox"
 lvim.log.level = "warn"
 lvim.format_on_save = {
   enabled = true,

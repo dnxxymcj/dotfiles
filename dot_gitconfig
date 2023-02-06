@@ -73,7 +73,7 @@
   email = dnxxymcj@gmail.com
 
 [core]
-  editor = lvim
+  editor = nvim
   excludesfile = /Users/cj/.gitignore
 
 [init]
