@@ -12,5 +12,8 @@ return {
         },
       },
     },
+    keys = {
+      { "<leader>a", "<cmd>Neotree<cr>", desc = "Explorer NeoTree", remap = true },
+    },
   },
 }
