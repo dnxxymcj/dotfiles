@@ -66,12 +66,18 @@ return {
           relativenumber = false,
           cursorline = true,
           cursorcolumn = false, -- disable cursor column
+          -- laststatus = 0,
           -- foldcolumn = "0", -- disable fold column
           -- list = false, -- disable whitespace characters
         },
       },
       plugins = {
         gitsigns = true,
+        options = {
+          enabled = true,
+          ruler = false, -- disables the ruler text in the cmd line area
+          showcmd = false, -- disables the command in the last line of the screen
+        },
       },
     },
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },

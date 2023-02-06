@@ -37,10 +37,8 @@ map("", "k", "n", { noremap = true, silent = true })
 map("", "K", "N", { noremap = true, silent = true })
 
 -- leap
-del({ "x", "o" }, "x")
-del({ "x", "o" }, "X")
-map({ "x", "o" }, "h", "<Plug>(leap-forward-till)")
-map({ "x", "o" }, "H", "<Plug>(leap-backward-till)")
+map({ "x", "o" }, "h", "<Plug>(leap-forward-till)", { noremap = true, silent = true })
+map({ "x", "o" }, "H", "<Plug>(leap-backward-till)", { noremap = true, silent = true })
 map("n", "h", "<Plug>(leap-forward-to)", { noremap = true, silent = true })
 map("n", "H", "<Plug>(leap-backward-to)", { noremap = true, silent = true })
 
@@ -72,5 +70,3 @@ map("n", "<Up>", ":resize -2<CR>", { noremap = true, silent = true })
 map("n", "<Down>", ":resize +2<CR>", { noremap = true, silent = true })
 map("n", "<Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 map("n", "<Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
-
--- TODO:

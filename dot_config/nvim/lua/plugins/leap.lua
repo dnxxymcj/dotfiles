@@ -2,7 +2,13 @@ return {
   {
     "ggandor/leap.nvim",
     event = "VeryLazy",
-    dependencies = { { "ggandor/flit.nvim", opts = { labeled_modes = "nv" } } },
+    dependencies = {
+      {
+        "ggandor/flit.nvim",
+        opts = { labeled_modes = "nv" },
+        -- keys = { f = "f", F = "F" },
+      },
+    },
     config = function(_, opts)
       local leap = require("leap")
       for k, v in pairs(opts) do
@@ -35,7 +41,9 @@ return {
         "a",
         "p",
       }
-      leap.add_default_mappings(true)
+      vim.keymap.set("", "s", "h", { noremap = true, silent = true })
+      vim.keymap.set("", "t", "l", { noremap = true, silent = true })
+      -- leap.add_default_mappings(true)
 
       vim.api.nvim_set_hl(0, "LeapBackdrop", { link = "Comment" })
       vim.api.nvim_set_hl(0, "LeapMatch", {
