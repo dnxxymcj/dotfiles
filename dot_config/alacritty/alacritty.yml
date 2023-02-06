@@ -1,4 +1,3 @@
-
 window:
   padding:
     x: 0
@@ -38,7 +37,7 @@ cursor:
   style:
     shape: Beam
     blinking: Always
-  vi_mode_style: 
+  vi_mode_style:
     shape: Block
 
 live_config_reload: true
@@ -49,7 +48,8 @@ mouse:
 hints:
   alphabet: "ntesiroahdufywlpmg,c"
   enabled:
-    - regex: "(mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\0-\
+    - regex:
+        "(mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\0-\
         \x1f-<>\"\\s{-}\\^⟨⟩`]+"
       # hyperlinks: true
       command: open
@@ -68,20 +68,20 @@ hints:
         mods: Control|Shift
 
 mouse_bindings:
-  - { mouse: Right,                 action: ExpandSelection }
-  - { mouse: Right,  mods: Control, action: ExpandSelection }
-  - { mouse: Middle, mode: ~Vi,     action: PasteSelection  }
+  - { mouse: Right, action: ExpandSelection }
+  - { mouse: Right, mods: Control, action: ExpandSelection }
+  - { mouse: Middle, mode: ~Vi, action: PasteSelection }
 
 key_bindings:
-  - { key: E,                           mode: Vi|~Search, action: Up                      }
-  - { key: N,                           mode: Vi|~Search, action: Down                    }
-  - { key: S,                           mode: Vi|~Search, action: Left                    }
-  - { key: T,                           mode: Vi|~Search, action: Right                   }
-  - { key: O,      mods: Shift,         mode: Vi|~Search, action: Low                     }
-  - { key: L,                           mode: Vi|~Search, action: SemanticRightEnd        }
-  - { key: L,      mods: Shift,         mode: Vi|~Search, action: WordRightEnd            }
-  - { key: K,                           mode: Vi|~Search, action: SearchNext              }
-  - { key: K,      mods: Shift,         mode: Vi|~Search, action: SearchPrevious          }
+  - { key: E, mode: Vi|~Search, action: Up }
+  - { key: N, mode: Vi|~Search, action: Down }
+  - { key: S, mode: Vi|~Search, action: Left }
+  - { key: T, mode: Vi|~Search, action: Right }
+  - { key: O, mods: Shift, mode: Vi|~Search, action: Low }
+  - { key: L, mode: Vi|~Search, action: SemanticRightEnd }
+  - { key: L, mods: Shift, mode: Vi|~Search, action: WordRightEnd }
+  - { key: K, mode: Vi|~Search, action: SearchNext }
+  - { key: K, mods: Shift, mode: Vi|~Search, action: SearchPrevious }
 
 import:
-  - ~/.config/alacritty/themes/nord.yaml 
+  - ~/.config/alacritty/themes/nordfox.yaml

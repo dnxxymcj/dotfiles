@@ -74,7 +74,7 @@
 
 [core]
   editor = lvim
-  excludesfile = $HOME/.gitignore_global
+  excludesfile = /Users/cj/.gitignore
 
 [init]
   defaultBranch = master

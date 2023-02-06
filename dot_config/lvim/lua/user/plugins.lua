@@ -4,6 +4,7 @@ M.config = function()
 
   lvim.plugins = {
 
+    { "EdenEast/nightfox.nvim" },
     { "shaunsingh/nord.nvim" },
     {
       "kylechui/nvim-surround",
