@@ -28,4 +28,7 @@ return {
       },
     },
   },
+
+  -- language specific extension modules
+  { import = "plugins.extras.lang.rust" },
 }

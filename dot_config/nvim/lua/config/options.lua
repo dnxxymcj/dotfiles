@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 vim.opt.backup = false
+vim.opt.laststatus = 3
 
 vim.opt.fillchars = {
   foldopen = "",

@@ -22,36 +22,61 @@ return {
     end,
   },
 
-  -- treesitter
   {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "bash",
-        "comment",
-        "diff",
-        "dockerfile",
-        "dot",
-        "git_rebase",
-        "gitattributes",
-        "gitcommit",
-        "gitignore",
-        "graphql",
-        "hcl",
-        "http",
-        "jq",
-        "julia",
-        "lua",
-        "make",
-        "markdown",
-        "markdown_inline",
-        "mermaid",
-        "python",
-        "regex",
-        "sql",
-        "vim",
-        "yaml",
+    "danymat/neogen",
+    keys = {
+      {
+        "<leader>cc",
+        function()
+          require("neogen").generate({})
+        end,
+        desc = "Neogen Comment",
       },
     },
+    opts = { snippet_engine = "luasnip" },
+  },
+
+  {
+    "smjonas/inc-rename.nvim",
+    cmd = "IncRename",
+    config = true,
+  },
+
+  {
+    "ThePrimeagen/refactoring.nvim",
+    keys = {
+      {
+        "<leader>r",
+        function()
+          require("refactoring").select_refactor()
+        end,
+        mode = "v",
+        noremap = true,
+        silent = true,
+        expr = false,
+        desc = "refactoring",
+      },
+    },
+    opts = {},
+  },
+
+  -- copilot
+  {
+    "zbirenbaum/copilot.lua",
+    enabled = false,
+    event = "VeryLazy",
+    config = true,
+  },
+
+  {
+    "nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-emoji",
+    },
+    ---@param opts cmp.ConfigSchema
+    opts = function(_, opts)
+      local cmp = require("cmp")
+      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "emoji" } }))
+    end,
   },
 }
