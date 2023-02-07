@@ -6,7 +6,6 @@ local map = vim.keymap.set
 local del = vim.keymap.del
 
 -- Unset LazyVim's default bindings
-del("n", "<C-h>")
 del("n", "<C-j>")
 del("n", "<C-k>")
 del("n", "<C-l>")
@@ -33,6 +32,8 @@ map("", "l", "e", { noremap = true, silent = true })
 map("", "L", "E", { noremap = true, silent = true })
 -- map("", "j", "t", { noremap = true, silent = true })
 -- map("", "J", "T", { noremap = true, silent = true })
+-- map("", "h", "s", { noremap = true, silent = true })
+-- map("", "H", "S", { noremap = true, silent = true })
 map("", "k", "n", { noremap = true, silent = true })
 map("", "K", "N", { noremap = true, silent = true })
 

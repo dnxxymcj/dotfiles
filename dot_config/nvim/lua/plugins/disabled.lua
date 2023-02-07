@@ -1,5 +1,5 @@
 return {
 
-  -- disable trouble
-  -- { "folke/trouble.nvim", enabled = false },
+  -- disable mini.bufremove
+  -- { "echasnovski/mini.bufremove", enabled = false },
 }

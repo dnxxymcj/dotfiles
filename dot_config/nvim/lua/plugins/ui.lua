@@ -1,4 +1,45 @@
 return {
+
+  -- notify customization
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      stages = "fade_in_slide_out",
+      timeout = 5000,
+      render = "compact",
+    },
+  },
+
+  -- scrollbar for Neovim
+  {
+    "dstein64/nvim-scrollview",
+    event = "BufReadPre",
+    config = {
+      excluded_filetypes = { "alpha", "neo-tree" },
+      current_only = true,
+      winblend = 75,
+    },
+  },
+
+  -- auto-resize windows
+  {
+    "anuvyklack/windows.nvim",
+    event = "WinNew",
+    dependencies = {
+      { "anuvyklack/middleclass" },
+      { "anuvyklack/animation.nvim", enabled = false },
+    },
+    keys = { { "<leader>Z", "<cmd>WindowsMaximize<cr>", desc = "Zoom" } },
+    config = function()
+      vim.o.winwidth = 5
+      vim.o.equalalways = false
+      require("windows").setup({
+        animation = { enable = false, duration = 150 },
+      })
+    end,
+  },
+
+  -- colorizer
   {
     "NvChad/nvim-colorizer.lua",
     event = "BufReadPre",

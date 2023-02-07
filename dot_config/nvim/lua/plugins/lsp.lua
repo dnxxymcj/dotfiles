@@ -1,5 +1,6 @@
 return {
-  -- LSP keymaps
+
+  -- LSP
   {
     "neovim/nvim-lspconfig",
     init = function()
@@ -9,5 +10,22 @@ return {
       -- add a keymap
       keys[#keys + 1] = { "J", vim.lsp.buf.hover, desc = "Hover" }
     end,
+  },
+
+  -- Mason
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
+      },
+      ui = {
+        icons = {
+          package_installed = "✓",
+          package_pending = "",
+          package_uninstalled = "✗",
+        },
+      },
+    },
   },
 }
