@@ -15,6 +15,8 @@ del("i", "<A-j>")
 del("n", "<A-k>")
 del("v", "<A-k>")
 del("i", "<A-k>")
+del("n", "<leader>ft")
+del("n", "<leader>fT")
 
 map("", "s", "h", { noremap = true, silent = true })
 map("", "t", "l", { noremap = true, silent = true })
@@ -30,12 +32,12 @@ map("v", "E", ":m '<-2<CR>gv-gv", { noremap = true, silent = true })
 
 map("", "l", "e", { noremap = true, silent = true })
 map("", "L", "E", { noremap = true, silent = true })
+map("", "k", "n", { noremap = true, silent = true })
+map("", "K", "N", { noremap = true, silent = true })
 -- map("", "j", "t", { noremap = true, silent = true })
 -- map("", "J", "T", { noremap = true, silent = true })
 -- map("", "h", "s", { noremap = true, silent = true })
 -- map("", "H", "S", { noremap = true, silent = true })
-map("", "k", "n", { noremap = true, silent = true })
-map("", "K", "N", { noremap = true, silent = true })
 
 -- leap
 map({ "x", "o" }, "h", "<Plug>(leap-forward-till)", { noremap = true, silent = true })
@@ -46,10 +48,10 @@ map("n", "H", "<Plug>(leap-backward-to)", { noremap = true, silent = true })
 map("", "gl", "ge", { noremap = true, silent = true })
 map("", "gL", "gE", { noremap = true, silent = true })
 
-map("", "<A-s>", "<C-w>h", { noremap = true, silent = true })
-map("", "<A-t>", "<C-w>l", { noremap = true, silent = true })
-map("", "<A-n>", "<C-w>j", { noremap = true, silent = true })
-map("", "<A-e>", "<C-w>k", { noremap = true, silent = true })
+map("", "<leader>ws", "<C-w>h", { noremap = true, silent = true, desc = "Go to left window" })
+map("", "<leader>wn", "<C-w>j", { noremap = true, silent = true, desc = "Go to lower window" })
+map("", "<leader>we", "<C-w>k", { noremap = true, silent = true, desc = "Go to upper window" })
+map("", "<leader>wt", "<C-w>l", { noremap = true, silent = true, desc = "Go to right window" })
 
 map({ "c", "i" }, "<C-b>", "<LEFT>", { noremap = true })
 map({ "c", "i" }, "<C-f>", "<RIGHT>", { noremap = true })
@@ -58,8 +60,18 @@ map({ "c", "i" }, "<C-e>", "<End>", { noremap = true })
 map("i", "<C-p>", "<Up>", { noremap = true })
 map("i", "<C-n>", "<Down>", { noremap = true })
 
-map("", "[<space>", ":<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[", { noremap = true, silent = true })
-map("", "]<space>", ":<c-u>put =repeat(nr2char(10), v:count1)<cr>", { noremap = true, silent = true })
+map(
+  "",
+  "[<space>",
+  ":<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[",
+  { noremap = true, silent = true, desc = "Add line above" }
+)
+map(
+  "",
+  "]<space>",
+  ":<c-u>put =repeat(nr2char(10), v:count1)<cr>",
+  { noremap = true, silent = true, desc = "Add line below" }
+)
 
 map("", ";", ":", { noremap = true })
 map({ "o", "v", "c", "i" }, "uy", "<ESC>", { noremap = true, silent = true })

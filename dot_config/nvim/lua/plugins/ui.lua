@@ -21,24 +21,6 @@ return {
     },
   },
 
-  -- auto-resize windows
-  {
-    "anuvyklack/windows.nvim",
-    event = "WinNew",
-    dependencies = {
-      { "anuvyklack/middleclass" },
-      { "anuvyklack/animation.nvim", enabled = false },
-    },
-    keys = { { "<leader>Z", "<cmd>WindowsMaximize<cr>", desc = "Zoom" } },
-    config = function()
-      vim.o.winwidth = 5
-      vim.o.equalalways = false
-      require("windows").setup({
-        animation = { enable = false, duration = 150 },
-      })
-    end,
-  },
-
   -- colorizer
   {
     "NvChad/nvim-colorizer.lua",
@@ -61,6 +43,14 @@ return {
         mode = "background", -- Set the display mode.
         virtualtext = "■",
       },
+    },
+  },
+
+  -- lualine
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      options = { section_separators = "", component_separators = "" },
     },
   },
 }
