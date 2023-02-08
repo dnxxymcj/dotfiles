@@ -112,6 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ze="~/.cargo/bin/zellij"
 alias vi=nvim
+alias v=nvim
 alias vim=nvim
 alias lg=lazygit
 alias cm=chezmoi
