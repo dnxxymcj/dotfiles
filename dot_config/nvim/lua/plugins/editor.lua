@@ -112,6 +112,13 @@ return {
         spacing = 3, -- spacing between columns
         align = "left", -- align columns left, center or right
       },
+      key_labels = {
+        ["<space>"] = "␣",
+        ["<cr>"] = "↩︎",
+        ["<tab>"] = "⇥",
+        ["<leader>"] = "🐑",
+        ["<esc>"] = "⎋",
+      },
     },
   },
 
