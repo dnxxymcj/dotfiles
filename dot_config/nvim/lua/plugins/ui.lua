@@ -11,8 +11,8 @@ return {
       require("incline").setup({
         highlight = {
           groups = {
-            InclineNormal = { guibg = palette.pink.base, guifg = palette.black.base },
-            InclineNormalNC = { guifg = palette.pink.base, guibg = palette.black.base },
+            InclineNormal = { guibg = palette.yellow.base, guifg = palette.black.base },
+            InclineNormalNC = { guifg = palette.yellow.base, guibg = palette.black.base },
           },
         },
         window = {
@@ -49,7 +49,7 @@ return {
         excluded_filetypes = { "prompt", "TelescopePrompt", "noice", "notify", "alpha", "neo-tree" },
         handle = { color = palette.bg3.base },
         marks = {
-          Cursor = { color = palette.red.base },
+          Cursor = { color = palette.yellow.base },
           Search = { color = palette.orange.base },
           Misc = { color = palette.magenta.base },
           Error = { color = spec.diag.error },
@@ -101,8 +101,27 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = {
       options = {
-        component_separators = "┊", --        
+        component_separators = "", --            ┊
         section_separators = "",
+      },
+      sections = {
+
+        lualine_y = {
+          { "location" },
+          {
+            function()
+              local current_line = vim.fn.line(".")
+              local total_lines = vim.fn.line("$")
+              local chars = { "_", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" }
+              local line_ratio = current_line / total_lines
+              local index = math.ceil(line_ratio * #chars)
+              return chars[index]
+            end,
+            padding = 0,
+            color = { fg = palette.yellow.base },
+            cond = nil,
+          },
+        },
       },
     },
   },
