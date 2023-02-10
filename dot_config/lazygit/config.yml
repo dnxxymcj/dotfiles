@@ -30,9 +30,6 @@ os:
 
 gui:
   showIcons: true
-  authorColors:
-    'CJ': '#D08770'
-    '*': '#0000ff'
 
 git:
   branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"

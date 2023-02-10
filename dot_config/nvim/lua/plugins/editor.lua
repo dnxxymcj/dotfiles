@@ -3,17 +3,34 @@ return {
   -- customize file explorer
   {
     "nvim-neo-tree/neo-tree.nvim",
+    cmd = "Neotree",
     keys = {
-      { "<leader>a", "<cmd>Neotree<cr>", desc = "Explorer NeoTree", remap = true },
+      { "<leader>E", "<cmd>Neotree toggle<cr>", desc = "Explorer toggle" },
+      { "<leader>e", "<cmd>Neotree<cr>", desc = "Explorer" },
     },
+    deactivate = function()
+      vim.cmd([[Neotree close]])
+    end,
+    init = function()
+      vim.g.neo_tree_remove_legacy_commands = 1
+      if vim.fn.argc() == 1 then
+        local stat = vim.loop.fs_stat(vim.fn.argv(0))
+        if stat and stat.type == "directory" then
+          require("neo-tree")
+        end
+      end
+    end,
     opts = {
       close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
       filesystem = {
+        bind_to_cwd = false,
+        follow_current_file = true,
         group_empty_dirs = true, -- when true, empty folders will be grouped together
       },
       window = {
         width = 30,
         mappings = {
+          ["<space>"] = "none",
           ["e"] = "none",
           ["o"] = "open",
           ["-"] = "open_split",
@@ -31,8 +48,11 @@ return {
     dependencies = {
       {
         "ggandor/flit.nvim",
-        opts = { labeled_modes = "nv" },
-        -- keys = { f = "f", F = "F" },
+        opts = {
+          labeled_modes = "nv",
+          multiline = false,
+        },
+        keys = { f = "f", F = "F" },
       },
     },
     config = function(_, opts)
@@ -67,8 +87,6 @@ return {
         "a",
         "p",
       }
-      vim.keymap.set("", "s", "h", { noremap = true, silent = true })
-      vim.keymap.set("", "t", "l", { noremap = true, silent = true })
       -- leap.add_default_mappings(true)
       -- leap
       vim.keymap.set({ "x", "o" }, "h", "<Plug>(leap-forward-till)", { noremap = true, silent = true })
@@ -150,7 +168,7 @@ return {
           goto_location = "<Cr>",
           focus_location = "o",
           hover_symbol = "<C-space>",
-          toggle_preview = "J",
+          toggle_preview = "K",
           rename_symbol = "r",
           code_actions = "a",
           fold = "s",

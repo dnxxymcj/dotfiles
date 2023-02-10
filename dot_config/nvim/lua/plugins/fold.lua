@@ -80,7 +80,7 @@ return {
         end,
       },
       {
-        "zj",
+        "zk",
         function()
           require("ufo").peekFoldedLinesUnderCursor()
         end,

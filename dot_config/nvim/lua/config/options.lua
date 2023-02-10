@@ -4,6 +4,7 @@
 
 vim.opt.backup = false
 vim.opt.laststatus = 3
+vim.o.timeoutlen = 800
 
 vim.opt.fillchars = {
   foldopen = "",
