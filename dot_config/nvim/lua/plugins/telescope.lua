@@ -32,48 +32,26 @@ return {
         mappings = {
           -- for input mode
           i = {
-            ["<C-n>"] = require("telescope.actions").move_selection_next,
-            ["<C-e>"] = require("telescope.actions").move_selection_previous,
-
-            ["<C-b>"] = require("telescope.actions").results_scrolling_up,
-            ["<C-f>"] = require("telescope.actions").results_scrolling_down,
-
-            ["<Down>"] = require("telescope.actions").move_selection_next,
-            ["<Up>"] = require("telescope.actions").move_selection_previous,
+            ["<C-j>"] = require("telescope.actions").move_selection_next,
+            ["<C-k>"] = require("telescope.actions").move_selection_previous,
 
             ["<CR>"] = require("telescope.actions").select_default,
             ["<esc>"] = require("telescope.actions").close,
             ["<Tab>"] = require("telescope.actions").close,
 
-            ["<C-k>"] = require("telescope.actions").which_key,
+            ["<A-/>"] = require("telescope.actions").which_key,
           },
           -- for normal mode
           n = {
-            ["<C-n>"] = require("telescope.actions").move_selection_next,
-            ["<C-e>"] = require("telescope.actions").move_selection_previous,
 
-            ["<C-b>"] = require("telescope.actions").results_scrolling_up,
-            ["<C-f>"] = require("telescope.actions").results_scrolling_down,
-
-            ["<Down>"] = require("telescope.actions").move_selection_next,
-            ["<Up>"] = require("telescope.actions").move_selection_previous,
+            ["<C-j>"] = require("telescope.actions").move_selection_next,
+            ["<C-k>"] = require("telescope.actions").move_selection_previous,
 
             ["<CR>"] = require("telescope.actions").select_default,
             ["<esc>"] = require("telescope.actions").close,
             ["<Tab>"] = require("telescope.actions").close,
 
-            ["<C-k>"] = require("telescope.actions").which_key,
-
-            ["s"] = require("telescope.actions").cycle_history_next,
-            ["t"] = require("telescope.actions").cycle_history_prev,
-            ["n"] = require("telescope.actions").move_selection_next,
-            ["e"] = require("telescope.actions").move_selection_previous,
-            ["q"] = require("telescope.actions").close,
-
-            ["gg"] = require("telescope.actions").move_to_top,
-            ["G"] = require("telescope.actions").move_to_bottom,
-
-            ["?"] = require("telescope.actions").which_key,
+            ["<A-/>"] = require("telescope.actions").which_key,
           },
         },
       },

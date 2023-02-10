@@ -64,15 +64,14 @@ return {
   {
     "echasnovski/mini.surround",
     opts = {
-      require("which-key").register({ ["<leader>m"] = { name = "surround" } }),
       mappings = {
-        add = "<leader>ma",
-        delete = "<leader>md",
-        find = "<leader>mf",
-        find_left = "<leader>mF",
-        highlight = "<leader>mh",
-        replace = "<leader>mr",
-        update_n_lines = "<leader>mn",
+        add = "sa",
+        delete = "sd",
+        find = "sf",
+        find_left = "sF",
+        highlight = "sh",
+        replace = "sr",
+        update_n_lines = "sn",
       },
     },
   },

@@ -4,7 +4,16 @@ return {
 
   { "catppuccin/nvim", name = "catppuccin", enabled = false },
 
-  { "EdenEast/nightfox.nvim" },
+  {
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("nightfox").setup({
+        options = {
+          -- transparent = true,
+        },
+      })
+    end,
+  },
 
   {
     "LazyVim/LazyVim",

@@ -1,36 +1,9 @@
-" 设置前导键
 let mapleader = " "
 
-noremap <silent> s h
-noremap <silent> t l
-noremap <silent> n j
-noremap <silent> e k
-
-noremap <silent> S ^
-noremap <silent> T $
-nnoremap <silent> N :m .+1<CR>==
-nnoremap <silent> E :m .-2<CR>==
-vnoremap <silent> N :m '>+1<CR>gv-gv
-vnoremap <silent> E :m '<-2<CR>gv-gv
-
-noremap <silent> l e
-noremap <silent> L E
-noremap <silent> h s
-noremap <silent> H S
-noremap <silent> j t
-noremap <silent> J T
-noremap <silent> k n
-noremap <silent> K N
-
-noremap <silent> ge gk
-noremap <silent> gn gj
-noremap <silent> gl ge
-noremap <silent> gL gE
-
-noremap <C-m> <C-w>h
-noremap <C-n> <C-w>j
-noremap <C-e> <C-w>k
-noremap <C-i> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
 
 inoremap <C-b> <left>
@@ -47,15 +20,10 @@ nnoremap U <C-r>
 noremap ; :
 nnoremap <CR> :noh<CR><CR>:<backspace>
 
-inoremap <silent> uy <ESC>
-vnoremap <silent> uy <ESC>
-onoremap <silent> uy <ESC>
-cnoremap <silent> uy <ESC>
-
-inoremap <silent> UY <ESC>
-vnoremap <silent> UY <ESC>
-onoremap <silent> UY <ESC>
-cnoremap <silent> UY <ESC>
+inoremap <silent> jj <ESC>
+cnoremap <silent> jj <ESC>
+inoremap <silent> JJ <ESC>
+cnoremap <silent> JJ <ESC>
 
 noremap <silent> <up> :resize -2<CR>
 noremap <silent> <down> :resize -2<CR>

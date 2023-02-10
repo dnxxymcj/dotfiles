@@ -31,11 +31,9 @@ return {
         width = 30,
         mappings = {
           ["<space>"] = "none",
-          ["e"] = "none",
           ["o"] = "open",
           ["-"] = "open_split",
           ["|"] = "open_vsplit",
-          ["i"] = "toggle_auto_expand_width",
         },
       },
     },
@@ -52,7 +50,6 @@ return {
           labeled_modes = "nv",
           multiline = false,
         },
-        keys = { f = "f", F = "F" },
       },
     },
     config = function(_, opts)
@@ -61,38 +58,11 @@ return {
         leap.opts[k] = v
       end
       leap.opts.safe_labels = {}
-      leap.opts.labels = {
-        "s",
-        "f",
-        "t",
-        "r",
-        "n",
-        "e",
-        "i",
-        "o",
-        "d",
-        "w",
-        "l",
-        "m",
-        "u",
-        "y",
-        "k",
-        "v",
-        "h",
-        "g",
-        "h",
-        "c",
-        "x",
-        "/",
-        "a",
-        "p",
-      }
-      -- leap.add_default_mappings(true)
-      -- leap
-      vim.keymap.set({ "x", "o" }, "h", "<Plug>(leap-forward-till)", { noremap = true, silent = true })
-      vim.keymap.set({ "x", "o" }, "H", "<Plug>(leap-backward-till)", { noremap = true, silent = true })
-      vim.keymap.set("n", "h", "<Plug>(leap-forward-to)", { noremap = true, silent = true })
-      vim.keymap.set("n", "H", "<Plug>(leap-backward-to)", { noremap = true, silent = true })
+
+      vim.keymap.set({ "x", "o" }, "t", "<Plug>(leap-forward-till)", { noremap = true, silent = true })
+      vim.keymap.set({ "x", "o" }, "T", "<Plug>(leap-backward-till)", { noremap = true, silent = true })
+      vim.keymap.set("n", "t", "<Plug>(leap-forward-to)", { noremap = true, silent = true })
+      vim.keymap.set("n", "T", "<Plug>(leap-backward-to)", { noremap = true, silent = true })
 
       vim.api.nvim_set_hl(0, "LeapBackdrop", { link = "Comment" })
       vim.api.nvim_set_hl(0, "LeapMatch", {
@@ -163,20 +133,6 @@ return {
         auto_unfold_hover = true,
         fold_markers = { "", "" },
         wrap = false,
-        keymaps = { -- These keymaps can be a string or a table for multiple keys
-          close = { "<Esc>", "q" },
-          goto_location = "<Cr>",
-          focus_location = "o",
-          hover_symbol = "<C-space>",
-          toggle_preview = "K",
-          rename_symbol = "r",
-          code_actions = "a",
-          fold = "s",
-          unfold = "t",
-          fold_all = "S",
-          unfold_all = "T",
-          fold_reset = "R",
-        },
         lsp_blacklist = {},
         symbol_blacklist = {},
         symbols = {

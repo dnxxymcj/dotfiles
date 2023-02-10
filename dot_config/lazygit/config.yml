@@ -1,28 +1,3 @@
-keybinding:
-  universal:
-    prevItem-alt: "e" # go one line up
-    nextItem-alt: "n" # go one line down
-    prevBlock-alt: "s" # goto the previous block / panel
-    nextBlock-alt: "t" # goto the next block / panel
-    scrollUpMain-alt1: "E" # main panel scroll up
-    scrollDownMain-alt1: "N" # main panel scroll down
-    scrollLeft: 'S' # scroll left within list view
-    scrollRight: 'T' # scroll right within list view
-    nextMatch: "k"
-    prevMatch: "K"
-    new: "k"
-    edit: "l"
-  files:
-    stashAllChanges: "h"
-    viewStashOptions: "H"
-  commits:
-    squashDown: "h"
-    squashAboveCommits: "H"
-    moveDownCommit: "<c-n>" # move commit down one
-    moveUpCommit: "<c-e>" # move commit up one
-    revertCommit: "j"
-    tagCommit: "J"
-
 os:
   editCommand: 'nvim' # as an example 
   openCommand: 'code -rg {{filename}}'

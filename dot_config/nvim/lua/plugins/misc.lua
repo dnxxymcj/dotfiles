@@ -19,7 +19,7 @@ return {
 
   {
     "Wansmer/treesj",
-    keys = { { "j", "<cmd>TSJToggle<cr>", desc = "Join Toggle" } },
+    keys = { { "J", "<cmd>TSJToggle<cr>", desc = "Join Toggle" } },
     opts = {
       use_default_keymaps = false,
       max_join_length = 150,
@@ -36,19 +36,6 @@ return {
         end,
         mode = { "n", "x" },
         desc = "Structural Replace",
-      },
-    },
-    opts = {
-      min_width = 50,
-      min_height = 5,
-      max_width = 120,
-      max_height = 25,
-      keymaps = {
-        close = "q",
-        next_match = "l",
-        prev_match = "L",
-        replace_confirm = "<cr>",
-        replace_all = "<leader><cr>",
       },
     },
   },

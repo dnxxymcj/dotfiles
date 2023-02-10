@@ -72,16 +72,5 @@ mouse_bindings:
   - { mouse: Right, mods: Control, action: ExpandSelection }
   - { mouse: Middle, mode: ~Vi, action: PasteSelection }
 
-key_bindings:
-  - { key: E, mode: Vi|~Search, action: Up }
-  - { key: N, mode: Vi|~Search, action: Down }
-  - { key: S, mode: Vi|~Search, action: Left }
-  - { key: T, mode: Vi|~Search, action: Right }
-  - { key: O, mods: Shift, mode: Vi|~Search, action: Low }
-  - { key: L, mode: Vi|~Search, action: SemanticRightEnd }
-  - { key: L, mods: Shift, mode: Vi|~Search, action: WordRightEnd }
-  - { key: K, mode: Vi|~Search, action: SearchNext }
-  - { key: K, mods: Shift, mode: Vi|~Search, action: SearchPrevious }
-
 import:
   - ~/.config/alacritty/themes/nordfox.yaml
