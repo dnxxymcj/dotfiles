@@ -10,10 +10,11 @@ del("n", "<leader>ft")
 del("n", "<leader>fT")
 del("t", "<esc><esc>")
 
-map({ "c", "i" }, "<C-b>", "<LEFT>", { noremap = true })
-map({ "c", "i" }, "<C-f>", "<RIGHT>", { noremap = true })
+map({ "c", "i" }, "<C-b>", "<Left>", { noremap = true })
+map({ "c", "i" }, "<C-f>", "<Right>", { noremap = true })
 map({ "c", "i" }, "<C-a>", "<Home>", { noremap = true })
 map({ "c", "i" }, "<C-e>", "<End>", { noremap = true })
+map({ "c", "i" }, "<C-d>", "<Del>", { noremap = true })
 map("i", "<C-p>", "<Up>", { noremap = true })
 map("i", "<C-n>", "<Down>", { noremap = true })
 
@@ -30,12 +31,13 @@ map(
   { noremap = true, silent = true, desc = "Add line below" }
 )
 
-map({ "c", "i" }, "jk", "<ESC>", { noremap = true, silent = true })
-map({ "c", "i" }, "jj", "<ESC>", { noremap = true, silent = true })
-map({ "c", "i" }, "kj", "<ESC>", { noremap = true, silent = true })
-map({ "c", "i" }, "JK", "<ESC>", { noremap = true, silent = true })
-map({ "c", "i" }, "JJ", "<ESC>", { noremap = true, silent = true })
-map({ "c", "i" }, "KJ", "<ESC>", { noremap = true, silent = true })
+map("i", "jk", "<ESC>", { noremap = true, silent = true })
+map("i", "jj", "<ESC>", { noremap = true, silent = true })
+map("i", "kj", "<ESC>", { noremap = true, silent = true })
+map("i", "JK", "<ESC>", { noremap = true, silent = true })
+map("i", "JJ", "<ESC>", { noremap = true, silent = true })
+map("i", "KJ", "<ESC>", { noremap = true, silent = true })
+
 map("n", "<CR>", ":noh<CR><CR>:<backspace>", { noremap = true, silent = true })
 map("n", "U", "<C-r>", { noremap = true, silent = true })
 map("", ";", ":", { noremap = true })

@@ -1,5 +1,17 @@
 return {
 
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   opts = function(_, opts)
+  --     local cmp = require("cmp")
+  --     opts.window = {
+  --       documentation = cmp.config.window.bordered({
+  --         winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
+  --       }),
+  --     }
+  --   end,
+  -- },
+
   -- better increase/descrease
   {
     "monaqa/dial.nvim",

@@ -101,16 +101,16 @@ return {
         align = "left", -- align columns left, center or right
       },
       key_labels = {
-        ["<space>"] = "␣",
+        ["<space>"] = "󱁐",
         ["<cr>"] = "↩︎",
         ["<tab>"] = "⇥",
-        ["<leader>"] = "🐑",
+        ["<leader>"] = " ",
         ["<esc>"] = "⎋",
       },
     },
   },
 
-  -- add symbols-outline
+  -- symbols-outline
   {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
