@@ -6,5 +6,7 @@ return {
 
   { "EdenEast/nightfox.nvim" },
 
+  -- { "sainnhe/everforest" },
+
   { "LazyVim/LazyVim", opts = { colorscheme = "nordfox" } },
 }
