@@ -116,6 +116,7 @@ alias v=nvim
 alias vim=nvim
 alias lg=lazygit
 alias cm=chezmoi
+alias ra=ranger
 export EDITOR=nvim
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
