@@ -20,17 +20,62 @@ return {
   },
 
   -- leap
+  -- {
+  --   "ggandor/leap.nvim",
+  --   event = "VeryLazy",
+  --   dependencies = {
+  --     {
+  --       "ggandor/flit.nvim",
+  --       opts = {
+  --         labeled_modes = "nv",
+  --         multiline = false,
+  --       },
+  --     },
+  --   },
+  --   config = function(_, opts)
+  --     local leap = require("leap")
+  --     for k, v in pairs(opts) do
+  --       leap.opts[k] = v
+  --     end
+  --     leap.opts.safe_labels = {}
+  --
+  --     vim.keymap.set({ "x", "o" }, "t", "<Plug>(leap-forward-till)", { noremap = true, silent = true })
+  --     vim.keymap.set({ "x", "o" }, "T", "<Plug>(leap-backward-till)", { noremap = true, silent = true })
+  --     vim.keymap.set("n", "t", "<Plug>(leap-forward-to)", { noremap = true, silent = true })
+  --     vim.keymap.set("n", "T", "<Plug>(leap-backward-to)", { noremap = true, silent = true })
+  --
+  --     vim.api.nvim_set_hl(0, "LeapBackdrop", { link = "Comment" })
+  --     vim.api.nvim_set_hl(0, "LeapMatch", {
+  --       fg = "black", -- for light themes, set to 'black' or similar
+  --       bold = true,
+  --       nocombine = true,
+  --     })
+  --     leap.opts.highlight_unlabeled_phase_one_targets = true
+  --   end,
+  -- },
+
+  -- easily jump to any location and enhanced f motions for Leap
+  {
+    "ggandor/flit.nvim",
+    keys = function()
+      ---@type LazyKeys[]
+      local ret = {}
+      for _, key in ipairs({ "f", "F" }) do
+        ret[#ret + 1] = { key, mode = { "n", "x", "o" }, desc = key }
+      end
+      return ret
+    end,
+    opts = {
+      labeled_modes = "nx",
+      multiline = false,
+    },
+  },
   {
     "ggandor/leap.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      {
-        "ggandor/flit.nvim",
-        opts = {
-          labeled_modes = "nv",
-          multiline = false,
-        },
-      },
+    keys = {
+      { "t", mode = { "n", "x", "o" }, desc = "Leap forward to" },
+      { "T", mode = { "n", "x", "o" }, desc = "Leap backward to" },
+      { "gt", mode = { "n", "x", "o" }, desc = "Leap from windows" },
     },
     config = function(_, opts)
       local leap = require("leap")
@@ -38,12 +83,10 @@ return {
         leap.opts[k] = v
       end
       leap.opts.safe_labels = {}
-
       vim.keymap.set({ "x", "o" }, "t", "<Plug>(leap-forward-till)", { noremap = true, silent = true })
       vim.keymap.set({ "x", "o" }, "T", "<Plug>(leap-backward-till)", { noremap = true, silent = true })
       vim.keymap.set("n", "t", "<Plug>(leap-forward-to)", { noremap = true, silent = true })
       vim.keymap.set("n", "T", "<Plug>(leap-backward-to)", { noremap = true, silent = true })
-
       vim.api.nvim_set_hl(0, "LeapBackdrop", { link = "Comment" })
       vim.api.nvim_set_hl(0, "LeapMatch", {
         fg = "black", -- for light themes, set to 'black' or similar
