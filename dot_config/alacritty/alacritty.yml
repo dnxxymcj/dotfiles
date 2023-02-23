@@ -33,6 +33,13 @@ selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   save_to_clipboard: false
 
+shell:
+  program: /opt/homebrew/bin/zsh
+  args:
+    - -l
+    - -c
+    - zellij attach --index 0 || zellij -l compact -s CJ
+
 cursor:
   style:
     shape: Beam
