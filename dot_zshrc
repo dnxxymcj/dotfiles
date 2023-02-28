@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ze=zellij
+alias h=hx
 alias vi=nvim
 alias v=nvim
 alias vim=nvim
